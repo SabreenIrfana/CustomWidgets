@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "gp-google-diection-map": {
+      "root": "projects/gp-google-diection-map",
+      "sourceRoot": "projects/gp-google-diection-map/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/gp-google-diection-map/tsconfig.lib.json",
+            "project": "projects/gp-google-diection-map/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gp-google-diection-map/src/test.ts",
+            "tsConfig": "projects/gp-google-diection-map/tsconfig.spec.json",
+            "karmaConfig": "projects/gp-google-diection-map/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gp-google-diection-map/tsconfig.lib.json",
+              "projects/gp-google-diection-map/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "gp-google-diection-map-project"

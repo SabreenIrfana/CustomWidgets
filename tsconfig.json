@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "gp-google-diection-map": [
+        "dist/gp-google-diection-map"
+      ],
+      "gp-google-diection-map/*": [
+        "dist/gp-google-diection-map/*"
+      ]
+    }
   }
 }
